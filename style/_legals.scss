@@ -1,0 +1,55 @@
+/*----------------LEGALS----------------*/
+
+.legals {
+  font-family: 'Montserrat', sans-serif;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  @include back(0.9);
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0;
+
+  div i {
+    font-size: 30px;
+    color: $maincolor;
+    float: right;
+    cursor: pointer;
+  }
+
+  .policies {
+    background-color: $white;
+    width: 80vw;
+    height: 60vh;
+    margin: 10vmin;
+    padding: 20px;
+    z-index: -1;
+    overflow: auto;
+    opacity: 0;
+  }
+
+  .terms {
+    background-color: $white;
+    width: 80vw;
+    height: 60vh;
+    margin: 10vmin;
+    padding: 20px;
+    z-index: -1;
+    overflow: auto;
+    opacity: 0;
+  }
+
+  .copies {
+    background-color: $white;
+    width: 80vw;
+    height: 60vh;
+    margin: 10vmin;
+    padding: 20px;
+    z-index: -1;
+    overflow: auto;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,936 @@
+/*-----------------SECTION 1-----------------*/
+
+@media only screen and (min-width: 800px) {
+
+  main .section1 {
+    font-family: 'Montserrat', sans-serif;
+    @include flex(row);
+    flex-wrap: nowrap ;
+    justify-content: space-between;
+    margin: 7vmin;
+    padding: 0;
+
+    .writing {
+      width: 40vw;
+      margin: auto;
+      padding: 0;
+      
+
+      .title {
+        text-align: center;
+        color: $maincolor;
+        font-size: 25px;
+        transform:translateX(100px);
+        transition: 1.5s;
+        opacity: 0;
+
+        h6 {
+          margin-top: 0;
+        }
+
+        .black {
+          color: $black;
+        }
+      }
+  
+      .text {
+        color: rgba(0, 0, 0, 0.6);
+        line-height: 1.8;
+        text-align: left;
+        font-size: 14px;
+        transform:translateX(100px);
+        transition: 1.5s;
+        opacity: 0;
+
+        p {
+          color: $black;
+        }
+      }
+
+      .social {
+        text-align: center;
+        margin: 50px auto 0 auto;
+        max-width: 190px;
+        @include flex(row);
+        justify-content: space-between;
+
+        i {
+          cursor: pointer;
+        }
+      }
+    }
+
+  
+
+    /*-----------------CAROUSEL---------------------*/
+
+    .carousel {
+      position: relative;
+      box-sizing: border-box;
+      height: 700px;
+      min-width: 400px;
+      max-width: 40vw;
+      margin: auto -3vmin auto auto;      
+      overflow: hidden;
+      transform:translateX(-100px);
+      transition: 1.5s;
+      opacity: 0;
+
+      .slone {
+        position: relative;
+        display: block;
+        width: 500px;
+        height: 800px;
+        background: url("../assets/small img/blog1.jpg") no-repeat center;
+        background-size: cover;
+        margin: auto;
+
+        .text {
+          box-sizing: border-box;
+          position: relative;
+          height: 700px;
+          width: 100%;
+          opacity: 0;
+          color: $white;
+          font-size: 3rem;
+          text-align: center;
+          @include flex(row);
+  
+          &:hover {
+            @include back(0.2);
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+          }
+
+          .inner {
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
+
+      .sltwo {
+        box-sizing: border-box;
+        position: relative;
+        display: none;
+        width: 500px;
+        height: 800px;
+        background: url("../assets/small img/blog2.jpg") no-repeat center;
+        background-size: cover;
+        margin: auto;
+
+        .text {
+          box-sizing: border-box;
+          position: relative;
+          height: 700px;
+          width: 100%;
+          opacity: 0;
+          color: $white;
+          font-size: 3rem;
+          text-align: center;
+          @include flex(row);
+  
+          &:hover {
+            @include back(0.2);
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+          }
+
+          .inner {
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
+
+      .slthree {
+        box-sizing: border-box;
+        position: relative;
+        display: none;
+        width: 500px;
+        height: 800px;
+        background: url("../assets/small img/blog3.jpg") no-repeat center;
+        background-size: cover;
+        margin: auto;
+
+        .text {
+          box-sizing: border-box;
+          position: relative;
+          height: 700px;
+          width: 100%;
+          opacity: 0;
+          color: $white;
+          font-size: 3rem;
+          text-align: center;
+          @include flex(row);
+  
+          &:hover {
+            @include back(0.2);
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+          }
+
+          .inner {
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
+
+      .slfour {
+        box-sizing: border-box;
+        position: relative;
+        display: none;
+        width: 500px;
+        height: 800px;
+        background: url("../assets/small img/blog4.jpg") no-repeat center;
+        background-size: cover;
+        margin: auto;
+
+        .text {
+          box-sizing: border-box;
+          position: relative;
+          height: 700px;
+          width: 100%;
+          opacity: 0;
+          color: $white;
+          font-size: 3rem;
+          text-align: center;
+          @include flex(row);
+  
+          &:hover {
+            @include back(0.2);
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+          }
+
+          .inner {
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
+
+      .slfive {
+        box-sizing: border-box;
+        position: relative;
+        display: none;
+        width: 500px;
+        height: 800px;
+        background: url("../assets/small img/blog5.jpg") no-repeat center;
+        background-size: cover;
+        margin: auto;
+        
+
+        .text {
+          box-sizing: border-box;
+          position: relative;
+          height: 700px;
+          width: 100%;
+          opacity: 0;
+          color: $white;
+          font-size: 3rem;
+          text-align: center;
+          @include flex(row);
+  
+          &:hover {
+            @include back(0.2);
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+          }
+
+          .inner {
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
+
+      .butoane {
+        box-sizing: border-box;
+        position: absolute;
+        @include flex(row);
+        justify-content: space-between;
+        padding: 3vh;
+        align-items: center;
+        width: 100%;
+        bottom: 0;        
+
+        .butoanecerc {
+          position: relative;
+          @include flex(row);
+          z-index: 2;
+
+          .cerc {
+            margin: 5px;
+            width: 15px;
+            height: 15px;
+            border: 2px solid $whitesemi;
+            border-radius: 10px;
+            cursor: pointer;
+            @include back(0);
+
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.5);
+              transition: 0.3s;
+            }
+          }
+        }
+
+        #prevBtn {
+          position: relative;
+          z-index: 2;
+          font-size: 30px;
+          cursor: pointer;
+          color: $whitesemi;
+  
+          &:hover {
+            color: $white;
+            transition: 0.3s;
+          }
+        }
+  
+        #nextBtn {
+          position: relative;
+          z-index: 2;
+          font-size: 30px;
+          cursor: pointer;
+          color: $whitesemi;
+  
+          &:hover {
+            color: $white;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.activat {
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+
+  main .section1 {
+    font-family: 'Montserrat', sans-serif;
+    @include flex(column);
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    margin: 7vmin;
+    padding: 0;
+
+    .writing {
+      width: 80vw;
+      margin: auto;
+      padding: 0;
+
+      .title {
+        text-align: center;
+        color: $maincolor;
+        font-size: 25px;
+        transform:translateX(100px);
+        transition: 1.5s;
+        opacity: 0;
+
+        h6 {
+          margin-top: 0;
+        }
+
+        .black {
+          color: $black;
+        }
+      }
+  
+      .text {
+        color: rgba(0, 0, 0, 0.6);
+        line-height: 1.8;
+        text-align: left;
+        font-size: 14px;
+        transform:translateX(100px);
+        transition: 1.5s;
+        opacity: 0;
+
+        p {
+          color: $black;
+        }
+      }
+
+      .social {
+        text-align: center;
+        margin: 2vh auto 0 auto;
+        max-width: 190px;
+        @include flex(row);
+        justify-content: space-between;
+
+        i {
+          cursor: pointer;
+        }
+      }
+    }
+
+  
+
+    /*-----------------CAROUSEL---------------------*/
+
+    .carousel {
+      width: 80vw;
+      height: 100vw;
+      margin: 50px auto 0 auto;
+      position: relative;
+      overflow: hidden;
+      transform:translateX(-100px);
+      transition: 1.5s;
+      opacity: 0;
+
+      .slone {
+        position: relative;
+        width: 100%;
+        display: block;
+        width: 600px;
+        height: 800px;
+        background: url("../assets/small img/blog1.jpg") no-repeat center;
+        background-size: cover;
+        margin: 0 auto 0 auto;
+
+        .text {
+          box-sizing: border-box;
+          position: relative;
+          opacity: 0;
+          width: 100%;
+          height: inherit;
+          color: $white;
+          font-size: 3rem;
+          text-align: center;
+          @include flex(row);
+  
+          &:hover {
+            @include back(0.2);
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+          }
+
+          .inner {
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
+
+      .sltwo {
+        position: relative;
+        display: none;
+        width: 600px;
+        height: 800px;
+        background: url("../assets/small img/blog2.jpg") no-repeat center;
+        background-size: cover;
+        margin: 0 auto 0 auto;
+
+        .text {
+          box-sizing: border-box;
+          position: relative;
+          opacity: 0;
+          width: 100%;
+          height: inherit;
+          color: $white;
+          font-size: 3rem;
+          text-align: center;
+          @include flex(row);
+  
+          &:hover {
+            @include back(0.2);
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+          }
+
+          .inner {
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
+
+      .slthree {
+        position: relative;
+        display: none;
+        width: 600px;
+        height: 800px;
+        background: url("../assets/small img/blog3.jpg") no-repeat center;
+        background-size: cover;
+        margin: 0 auto 0 auto;
+
+        .text {
+          box-sizing: border-box;
+          position: relative;
+          opacity: 0;
+          width: 100%;
+          height: inherit;
+          color: $white;
+          font-size: 3rem;
+          text-align: center;
+          @include flex(row);
+  
+          &:hover {
+            @include back(0.2);
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+          }
+
+          .inner {
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
+
+      .slfour {
+        position: relative;
+        display: none;
+        width: 600px;
+        height: 800px;
+        background: url("../assets/small img/blog4.jpg") no-repeat center;
+        background-size: cover;
+        margin: 0 auto 0 auto;
+
+        .text {
+          box-sizing: border-box;
+          position: relative;
+          opacity: 0;
+          width: 100%;
+          height: inherit;
+          color: $white;
+          font-size: 3rem;
+          text-align: center;
+          @include flex(row);
+  
+          &:hover {
+            @include back(0.2);
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+          }
+
+          .inner {
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
+
+      .slfive {
+        position: relative;
+        display: none;
+        width: 600px;
+        height: 800px;
+        background: url("../assets/small img/blog5.jpg") no-repeat center;
+        background-size: cover;
+        margin: 0 auto 0 auto;
+
+        .text {
+          box-sizing: border-box;
+          position: relative;
+          opacity: 0;
+          width: 100%;
+          height: inherit;
+          color: $white;
+          font-size: 3rem;
+          text-align: center;
+          @include flex(row);
+  
+          &:hover {
+            @include back(0.2);
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+          }
+
+          .inner {
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
+
+      .butoane {
+        box-sizing: border-box;
+        position: absolute;
+        @include flex(row);
+        justify-content: space-between;
+        padding: 3vh;
+        align-items: center;
+        width: 100%;
+        bottom: 0;      
+
+        .butoanecerc {
+          position: relative;
+          @include flex(row);
+          z-index: 2;
+
+          .cerc {
+            margin: 5px;
+            width: 15px;
+            height: 15px;
+            border: 2px solid $whitesemi;
+            border-radius: 10px;
+            cursor: pointer;
+            @include back(0);
+
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.5);
+              transition: 0.3s;
+            }
+          }
+        }
+
+        #prevBtn {
+          position: relative;
+          z-index: 2;
+          font-size: 30px;
+          cursor: pointer;
+          color: $whitesemi;
+  
+          &:hover {
+            color: $white;
+            transition: 0.3s;
+          }
+        }
+  
+        #nextBtn {
+          position: relative;
+          z-index: 2;
+          font-size: 30px;
+          cursor: pointer;
+          color: $whitesemi;
+  
+          &:hover {
+            color: $white;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 425px) {
+
+  main .section1 {
+    font-family: 'Montserrat', sans-serif;
+    @include flex(column);
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    margin: 7vmin;
+    padding: 0;
+
+    .writing {
+      width: 80vw;
+      margin: auto;
+      padding: 0;
+
+      .title {
+        text-align: center;
+        color: $maincolor;
+        font-size: 25px;
+        transform:translateX(100px);
+        transition: 1.5s;
+        opacity: 0;
+
+        h6 {
+          margin-top: 0;
+        }
+
+        .black {
+          color: $black;
+        }
+      }
+  
+      .text {
+        color: rgba(0, 0, 0, 0.6);
+        line-height: 1.8;
+        text-align: left;
+        font-size: 14px;
+        transform:translateX(100px);
+        transition: 1.5s;
+        opacity: 0;
+
+        p {
+          color: $black;
+        }
+      }
+
+      .social {
+        text-align: center;
+        margin: 2vh auto 0 auto;
+        max-width: 190px;
+        @include flex(row);
+        justify-content: space-between;
+
+        i {
+          cursor: pointer;
+        }
+      }
+    }
+
+  
+
+    /*-----------------CAROUSEL---------------------*/
+
+    .carousel {
+      width: 80vw;
+      height: 100vw;
+      margin: 50px auto 0 auto;
+      position: relative;
+      overflow: hidden;
+      transform:translateX(-100px);
+      transition: 1.5s;
+      opacity: 0;
+
+      .slone {
+        position: relative;
+        height: 100%;;
+        width: 100%;
+        display: block;
+        background: url("../assets/small img/blog1.jpg") no-repeat center;
+        background-size: cover;
+        margin: 0 auto 0 auto;
+
+        .text {
+          box-sizing: border-box;
+          position: relative;
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+          color: $white;
+          font-size: 1rem;
+          text-align: center;
+          @include flex(row);
+  
+          &:hover {
+            @include back(0.2);
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+          }
+
+          .inner {
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
+
+      .sltwo {
+        position: relative;
+        display: none;
+        height: 100%;;
+        width: 100%;
+        background: url("../assets/small img/blog2.jpg") no-repeat center;
+        background-size: cover;
+        margin: 0 auto 0 auto;
+
+        .text {
+          box-sizing: border-box;
+          position: relative;
+          opacity: 0;
+          width: 100%;
+          height: inherit;
+          color: $white;
+          font-size: 1rem;
+          text-align: center;
+          @include flex(row);
+  
+          &:hover {
+            @include back(0.2);
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+          }
+
+          .inner {
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
+
+      .slthree {
+        position: relative;
+        display: none;
+        height: 100%;;
+        width: 100%;
+        background: url("../assets/small img/blog3.jpg") no-repeat center;
+        background-size: cover;
+        margin: 0 auto 0 auto;
+
+        .text {
+          box-sizing: border-box;
+          position: relative;
+          opacity: 0;
+          width: 100%;
+          height: inherit;
+          color: $white;
+          font-size: 1rem;
+          text-align: center;
+          @include flex(row);
+  
+          &:hover {
+            @include back(0.2);
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+          }
+
+          .inner {
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
+
+      .slfour {
+        position: relative;
+        display: none;
+        height: 100%;;
+        width: 100%;
+        background: url("../assets/small img/blog4.jpg") no-repeat center;
+        background-size: cover;
+        margin: 0 auto 0 auto;
+
+        .text {
+          box-sizing: border-box;
+          position: relative;
+          opacity: 0;
+          width: 100%;
+          height: inherit;
+          color: $white;
+          font-size: 1rem;
+          text-align: center;
+          @include flex(row);
+  
+          &:hover {
+            @include back(0.2);
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+          }
+
+          .inner {
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
+
+      .slfive {
+        position: relative;
+        display: none;
+        height: 100%;;
+        width: 100%;
+        background: url("../assets/small img/blog5.jpg") no-repeat center;
+        background-size: cover;
+        margin: 0 auto 0 auto;
+
+        .text {
+          box-sizing: border-box;
+          position: relative;
+          opacity: 0;
+          width: 100%;
+          height: inherit;
+          color: $white;
+          font-size: 1rem;
+          text-align: center;
+          @include flex(row);
+  
+          &:hover {
+            @include back(0.2);
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+          }
+
+          .inner {
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
+
+      .butoane {
+        box-sizing: border-box;
+        position: absolute;
+        @include flex(row);
+        justify-content: space-between;
+        padding: 3vh;
+        align-items: center;
+        width: 100%;
+        bottom: 0;      
+
+        .butoanecerc {
+          position: relative;
+          @include flex(row);
+          z-index: 2;
+
+          .cerc {
+            margin: 5px;
+            width: 15px;
+            height: 15px;
+            border: 2px solid $whitesemi;
+            border-radius: 10px;
+            cursor: pointer;
+            @include back(0);
+
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.5);
+              transition: 0.3s;
+            }
+          }
+        }
+
+        #prevBtn {
+          position: relative;
+          z-index: 2;
+          font-size: 30px;
+          cursor: pointer;
+          color: $whitesemi;
+  
+          &:hover {
+            color: $white;
+            transition: 0.3s;
+          }
+        }
+  
+        #nextBtn {
+          position: relative;
+          z-index: 2;
+          font-size: 30px;
+          cursor: pointer;
+          color: $whitesemi;
+  
+          &:hover {
+            color: $white;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+}

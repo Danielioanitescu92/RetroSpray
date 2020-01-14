@@ -1,0 +1,112 @@
+/*----------HEADER-------------*/
+
+@import "./variables";
+@import "./mixins";
+
+header {
+  font-family: 'Montserrat', sans-serif;
+  color: $maincolor;
+  margin-bottom: 5vh;
+
+  .background {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../assets/header.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    @include flex(column);
+
+    .centers {
+      margin: auto;
+    }
+
+    .name,
+    .present,
+    .undertext {
+      @include flex(column);
+      align-items: center;
+    }
+
+    .name {
+      margin: 0;
+
+      h1 {
+        margin-top: 0;
+      }
+
+      h4{
+        margin-bottom: 0;
+      }
+    }
+
+    .present {
+      margin: 50px;
+      position: relative;
+      @include flex(row);
+      align-items: center;
+      justify-content: center;
+      height: 150px;
+
+      div {
+        @include flex(row);
+        display: block;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        margin: 0 1vw 0 1vw;
+        cursor: pointer;
+        padding: auto 0 auto 0;
+
+        img {
+          width: 250px;
+          height: 190px;
+          opacity: 0.7;
+          filter: grayscale(1);
+          cursor: pointer;
+          border: 5px solid $maincolor;
+
+          &:hover {
+            transition: 0.2s;
+            filter: grayscale(0);
+            transform: scale(1.15, 1.15);
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .undertext {
+      margin: -20px 0 20px 0;
+
+      button {
+        background-color: rgba(0, 0, 0, 0);
+        color: $maincolor;
+        padding: 10px;
+        width: 200px;
+        border: 2px solid $maincolor;
+        cursor: pointer;
+        font-size: 18px;
+        margin-top: 20px;
+        outline: none;
+
+        &:hover {
+          background-color: $maincolor;
+          color: $white;
+          transition: 0.1s ease-in;
+        }
+      }
+    }
+
+    .line {
+      height: 1px;
+      width: 300px;
+      background: linear-gradient(90deg, rgba(190, 156, 106, 0), rgba(190, 156, 106, 1), rgba(190, 156, 106, 0));
+    }
+  }
+}
+
+header header .background header .background header .background .name>* {
+  margin: 10px;
+}
+
+header .background header .background header .background .undertext>* {
+  margin: 10px;
+}

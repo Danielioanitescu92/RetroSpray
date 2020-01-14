@@ -1,0 +1,50 @@
+.section2 .background .container .modal {
+  font-family: 'Montserrat', sans-serif;
+  @include flex(column);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding-top: 50px;
+  @include back(0.9);
+  z-index: -1;
+  opacity: 0;
+  overflow: auto;
+
+  i {
+    position: absolute;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    z-index: 9999;
+    top: 20px;
+    right: 7vw;
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+  }
+
+  .modalImg {
+    height: 60vh;
+    z-index: 999;
+  }
+
+  .modalTitle {
+    z-index: 999;
+    margin: 2vmin;
+    color: rgba(255, 255, 255, 0.8);
+    @include back(0);
+    text-align: center;
+  }
+
+  .modalDetails {
+    z-index: 999;
+    width: 80%;
+    color: rgba(255, 255, 255, 0.8);
+    @include back(0);
+    text-align: center;
+  }
+}

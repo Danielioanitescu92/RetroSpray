@@ -1,0 +1,187 @@
+/*-----------------SECTION3----------------*/
+
+.section3 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 100px 0 100px;
+
+  .title3 {
+    text-align: center;
+    color: $maincolor;
+    font-size: 25px;
+    margin: 100px;
+    transform:translateX(100px);
+    transition: 1.5s;
+    opacity: 0;
+
+    .black {
+      color: $black;
+    }
+
+    .social {
+      text-align: center;
+      margin: 0 auto 0 auto;
+      width: 190px;
+      @include flex(row);
+      justify-content: space-between;
+
+      i {
+        font-size: 16px;
+        color: $black;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .container {
+    width: 100vw;
+    @include flex(column);
+    align-items: center;
+
+    .under {
+      width: 86vw;
+      @include flex(row);
+      flex-wrap: wrap;
+      margin: 50px 0 50px 0;
+      border: 1px solid $maincolor;
+    }
+
+    .form {
+      background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../assets/contact.jpg") no-repeat center;
+      width: 50%;
+      height: 600px;
+      @include flex(column);
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        text-align: center;
+        margin-top: -15vh;
+        margin-bottom: 2vh;
+        font-size: 20px;
+        width: 200px;
+      }
+
+      input {
+        border: 1px solid $maincolor;
+        outline: none;
+      }
+
+      .submit {
+        display: block;
+        width: 200px;
+        margin: auto;
+        background-color: rgba(190, 156, 106, 0);
+        border: 2px solid $maincolor;
+        color: $maincolor;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(190, 156, 106, 1);
+          border: 2px solid $maincolor;
+          color: $white;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+
+  .subscribe {
+    width: 50%;
+    height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../assets/boring-communication-conference-7115.jpg") no-repeat center;
+    background-position-y: 50%;
+    background-size: 300%;
+    @include flex(column);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .title { 
+      
+    
+      h1 {
+        width: 100%;
+        color: $maincolor;
+      }
+    }
+
+    .address {
+      @include flex(row);
+      margin-bottom: 80px;
+
+      .typer {
+        width: 18vw;
+        padding: 10px;
+        @include back(0);
+        border: 1px solid $maincolor;
+        color: rgba(255, 255, 255, 0.7);
+        outline: none;
+      }
+
+      .sub {
+        width: 100px;
+        height: 37px;
+        background-color: rgba(255, 255, 255, 0);
+        border: 1px solid $maincolor;
+        color: $maincolor;
+        cursor: pointer;
+        outline: none;
+
+        &:hover {
+          background-color: $maincolor;
+          color: $white;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+}
+
+.section3 .container .form>* {
+  font-family: 'Montserrat', sans-serif;
+  padding: 2vmin;
+  width: 30vw;
+  font-size: 14px;
+  color: $maincolor;
+  @include back(0);
+}
+
+#mess {
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid $maincolor;
+  outline: none;
+}
+
+@media only screen and (max-width: 500px) {
+
+  .section3 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 50px 0 100px;
+  
+    .title3 {
+      text-align: center;
+      color: $maincolor;
+      font-size: 25px;
+      margin: 50px;
+      transform:translateX(100px);
+      transition: 1.5s;
+      opacity: 0;
+  
+      .black {
+        color: $black;
+      }
+  
+      .social {
+        text-align: center;
+        margin: 2vh auto 0 auto;
+        max-width: 190px;
+        @include flex(row);
+        justify-content: space-between;
+    
+        i {
+          cursor: pointer;
+        }
+      }
+    }
+  } 
+}

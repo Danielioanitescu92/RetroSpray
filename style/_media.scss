@@ -1,0 +1,344 @@
+/*-------------RESPONSIVE--------------*/
+
+@media only screen and (max-width: 800px) {
+
+  @keyframes open {
+    from {
+      right: 100vw;
+    }
+
+    to {
+      right: 0;
+    }
+  }
+
+  @keyframes close {
+    from {
+      right: 0;
+    }
+
+    to {
+      right: 100vw;
+    }
+  }
+
+  /*------------COOKIES-----------*/
+
+  .cookie {
+    width: 100vw;
+    height: 60px;
+    margin: 0;
+
+    button {
+      padding: 10px;
+      margin-right: 35px;
+    }
+  }
+
+  /*----------LEGALS--------------*/
+
+  .legals {
+    .policies {
+      width: 75vw;
+    }
+
+    .terms {
+      width: 75vw;
+    }
+
+    .copies {
+    width: 75vw;
+    }
+  }
+
+  /*------------OPENER------------*/
+
+  header .background .opener>* {
+    display: block;
+  }
+
+  header .background .opener {
+    margin: 0;
+    display: none;
+    opacity: 1;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background-color: $white;
+    z-index: 9;
+    animation-name: open;
+    animation-duration: 0.5s;
+
+    .topmenuu {
+      @include flex(row);
+      justify-content: flex-end;
+
+      #closing {
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        margin: 20px 7vw 20px 0;
+      }
+    }
+
+    .topopenlist ul {
+      padding: 70px 0 0 0;
+      text-align: center;
+      margin: auto;
+  
+      li {
+        text-align: center;
+        font-size: 16px;
+        margin: 7vh auto 7vh auto;
+        list-style-type: none;
+  
+        a {
+          text-decoration: none;
+          color: rgba(190, 156, 106, 0.8);
+        }
+      }
+    }    
+  }
+
+  /*------------TOP MENU---------------*/
+
+  header .background .topmenu {
+    .toplist {
+      display: none;
+    }
+
+    .burgr {
+      height: 30px;
+      width: 36px;
+      cursor: pointer;
+      margin: 20px 7vw 20px 0;
+      z-index: 6;
+
+      div {
+        width: 36px;
+        height: 6px;
+        background-color: $maincolor;
+      }
+
+      .ltwo {
+        margin-top: 6px;
+      }
+
+      .lthree {
+        margin-top: 6px;
+      }
+    }
+  }
+
+  /*------------STICKY MENU-----------*/
+
+  header .background nav {
+    @include flex(row);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height: 70px;
+    z-index: 5;
+
+    .toplist {
+      display: none;
+    }
+
+    .title {
+      @include flex(row);
+      cursor: pointer;
+
+      i {
+        font-size: 35px;
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-top: -10px;
+        font-size: 30px;
+      }
+    }
+  }
+
+  /*----------------STICKY NAV CLASS--------------*/
+
+  .sticky {
+    visibility: visible !important;
+    margin: 0 0 0 0 !important;
+    transition: 0.5s;
+    position: fixed !important;
+  }
+
+
+  /*-------------BURGER-------------*/
+
+  header .background nav .burger {
+    cursor: pointer;
+    margin: 20px 7vw 20px 0;;
+    z-index: 7;
+    height: 30px;
+    width: 36px;
+
+    div {
+        
+      height: 6px;
+      background-color: $maincolor;
+    }
+
+    .ltwo {
+      margin-top: 6px;
+    }
+
+    .lthree {
+      margin-top: 6px;
+    }
+  }
+
+  /*---------------HEADER CENTERS---------*/
+
+  header .background .centers {
+    margin-left: 0;
+    margin-right: 0;
+    }
+
+  /*---------------HEADER PRESENTATION---------*/
+
+  header .background .present {
+    position: relative;
+    @include flex(row);
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+
+    #done {
+      visibility: hidden;
+    }
+
+    #dtwo {
+      height: 200px;
+    }
+
+    #dthree {
+      visibility: hidden;
+    }
+
+    div img {
+      width: 240px;
+      opacity: 0.7;
+      filter: grayscale(1);
+      border: 5px solid $maincolor;
+    }
+  }
+
+  /*------------PRESENTATION HOVER------------*/
+
+  header .background .present div img:hover {
+    width: 240px;
+    filter: grayscale(0);
+    opacity: 1;
+    margin-top: 0;
+  }
+
+  
+}
+
+@media only screen and (max-width: 500px) {
+
+  /*---------------GALLERY---------------*/
+
+  .section2 .background .container div {
+    z-index: 2;
+    position: relative;
+    width: 310px;
+    height: 310px;
+    background-color: $white;
+    margin: 5vmin;
+    box-sizing: border-box;
+  }
+
+  .section2 .background .container .paint .paintImgs:hover {
+    filter: grayscale(0);
+    transform: scale(1.1, 1.1);
+    transition: 0.3s;
+  }
+
+  /*-------------------MODAL------------------*/
+
+  .section2 .background .container .modal .modalImg {
+    height: 200px;
+    z-index: 999;
+  }
+
+  /*----------------SUBSCRIBE---------------*/
+
+  .section3 .container {
+    .under {
+      @include flex(column);
+      width: 100%;
+    }
+
+    .form {
+      background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../assets/contact.jpg") no-repeat center;
+      width: 100%;
+      @include flex(column);
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .section3 .container .form>* {
+    padding: 2vmin;
+    width: 190px;
+    font-size: 14px;
+    color: $maincolor;
+    @include back(0);
+  }
+
+  #mess {
+    width: 190px;
+    height: 10em;
+  }
+
+  .section3 .subscribe {
+    width: 100%;
+
+    .address {
+      .sub {
+       width: 100px;
+      }
+
+      .typer {
+        width: 100px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 801px) {
+
+  #bigup {
+    .burgr {
+      visibility: hidden;
+    }
+    .toplist {
+      visibility: visible;
+      display: block;
+    }
+
+  }
+
+  #nav {
+    .burger {
+      visibility: hidden;
+    }
+    .toplist{
+      visibility: visible;
+      display: block;
+    }
+  }
+
+}

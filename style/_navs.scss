@@ -1,0 +1,132 @@
+/*-------------TOP NAV---------------*/
+
+a {
+  text-decoration: none;
+}
+
+header .background .opener>* {
+  font-family: 'Montserrat', sans-serif;
+  display: none;
+}
+
+header .background .topmenu {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  height: 70px;
+  @include flex(row);
+  justify-content: space-between;
+  color: $maincolor;
+
+  .toptitle {
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 0px 0px 7vw;
+  }
+
+  .toplist ul {
+    @include flex(row);
+    justify-content: center;
+    align-content: center;
+    list-style-type: none;
+    margin: 27px 7vw 0px 0px;
+    
+
+    li {
+      margin: 0 0 0 85px;
+
+      a {
+        text-decoration: none;
+        color: $maincolor;
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+/*--------------STICKY NAV------------------*/
+
+#nav {
+  background: rgba(255, 255, 255, 0.9);
+  @include flex(row);
+  padding: 0;
+  height: 70px;
+  font-family: 'Montserrat', sans-serif;
+  justify-content: space-between;
+  position: fixed;  
+  margin: -70px 0 0 0;  
+  width: 100%;
+  z-index: 5;
+
+  .title {
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 5px 0px 0px 7vw;
+  }
+
+  .toplist ul {
+    @include flex(row);
+    justify-content: center;
+    align-content: center;
+    list-style-type: none;
+    margin: 27px 7vw 0px 0px;
+
+    li {
+      margin: 0 0 0 85px;
+
+      a {
+        text-decoration: none;
+        color: $maincolor;
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+/*----------------STICKY NAV CLASS--------------*/
+
+.sticky {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 !important;
+  transition: 0.5s;
+}
+
+/*-------------BURGER CLICK----------------*/
+
+.burger div {
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.x .lone {
+  transform: rotate(-45deg);
+  margin-bottom: -12px;
+}
+
+.x .ltwo {
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.x .lthree {
+  opacity: 0;
+}
+
+.burgr div {
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.x .lone {
+  transform: rotate(-45deg);
+  margin-bottom: -12px;
+}
+
+.x .ltwo {
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.x .lthree {
+  opacity: 0;
+}

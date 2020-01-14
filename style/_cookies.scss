@@ -1,0 +1,43 @@
+/*--------------COOKIE--------------*/
+
+@import "./variables";
+@import "./mixins";
+
+.cookie {
+  @include back(0.9);
+  @include flex(row);
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  margin: 0 10vw 0 10vw;
+  color: $white;
+  height: 40px;
+  width: 80vw;
+  bottom: -60px;
+  padding: 10px;
+  text-align: center;
+  z-index: 9;
+  font-family: 'Montserrat', sans-serif;
+
+
+  p {
+    font-size: 15px;
+  }
+
+  button {
+    cursor: pointer;
+    border: 2px solid $maincolor;
+    float: right;
+    background-color: $mainempty;
+    color: $maincolor;
+    padding: 10px 20px 10px 20px;
+    outline: none;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $maincolor;
+      color: $white;
+      transition: 0.3s;
+    }
+  }
+}

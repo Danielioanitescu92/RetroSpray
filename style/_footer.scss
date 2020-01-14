@@ -1,0 +1,86 @@
+/*------------------FOOTER------------------*/
+
+@import "./variables";
+@import "./mixins";
+
+footer {
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgba(40, 42, 43, 1);
+  color: $white;
+  font-size: 10px;
+  width: 100%;
+
+  * {
+    margin:0;
+    padding:0;
+  }
+
+  .container {
+    position: relative;
+    margin: 20px 7vw 0 7vw;
+    padding: 0;
+    @include flex(row);
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .title {
+      margin-top: 0;
+    }
+
+    .copyright {
+      @include flex(column);
+
+      p{
+        margin-top: 0;
+      }
+    }
+
+    .navigation {
+      @include flex(column);
+
+      a {
+        color: rgb(204, 204, 204);
+        text-decoration: none;
+
+        &:hover {
+          color: $white;
+          transition: 0.2s;
+        }
+      }
+    }
+
+    .social {
+      @include flex(column);
+
+      i {
+        cursor: pointer;
+
+        &:hover {
+          color: $white;
+          transition: 0.2s;
+        }
+      }
+    }
+
+    .address{
+      @include flex(column);
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+footer .container>* {
+  margin-bottom: 3vh;
+  margin-top: 3vh;
+}
+
+
+@media only screen and (max-width: 500px) {
+  footer .container .social {
+    display: none;
+  }
+}
